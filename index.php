@@ -87,7 +87,7 @@ include "connection.php";
                             <div class="col-6">
                                 <label class="form-label">Gender</label>
                                 <select class="form-control" id="gender">
-
+                                <option>Select Gender</option>
                                 <?php
                                     $rs = Database::search("SELECT * FROM `gender`");
                                     $num = $rs->num_rows;
@@ -112,7 +112,7 @@ include "connection.php";
                             </div>
 
                             <div class="col-12 col-lg-6 d-grid">
-                                <button class="btn btn-primary">Sign Up</button>
+                                <button class="btn btn-primary" onclick="signup();">Sign Up</button>
                             </div>
 
                             <div class="col-12 col-lg-6 d-grid">
@@ -150,7 +150,7 @@ include "connection.php";
                                 <a href="#" class="link-primary">Forgot Password?</a>
                             </div>
                             <div class="col-12 col-lg-6 d-grid">
-                                <button class="btn btn-primary">Sign In</button>
+                                <button class="btn btn-primary" onclick="signin();">Sign In</button>
                             </div>
                             <div class="col-12 col-lg-6 d-grid">
                                 <button class="btn btn-danger" onclick="changeView();">New to eShop? Join Now</button>
