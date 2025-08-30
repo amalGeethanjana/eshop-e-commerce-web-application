@@ -87,27 +87,27 @@ include "connection.php";
                             <div class="col-6">
                                 <label class="form-label">Gender</label>
                                 <select class="form-control" id="gender">
-                                <option>Select Gender</option>
-                                <?php
+                                    <option>Select Gender</option>
+                                    <?php
                                     $rs = Database::search("SELECT * FROM `gender`");
                                     $num = $rs->num_rows;
 
-                                    for($x = 0;$x < $num;$x++){
+                                    for ($x = 0; $x < $num; $x++) {
                                         $data = $rs->fetch_assoc();
-                                        ?>
+                                    ?>
 
                                         <option value="<?php echo $data["gender_id"]; ?>">
-                                            <?php echo $data["gender_name"]; ?>
+                                            <?php echo $data["gender_name"]; ?>2
                                         </option>
-                                        <?php
+                                    <?php
                                     }
-                                ?>
-                                    
+                                    ?>
 
-                                        
-                                        
 
-                                    
+
+
+
+
                                 </select>
                             </div>
 
@@ -123,7 +123,6 @@ include "connection.php";
                     </div>
 
                     <!-- signupbox -->
-
                     <!-- signinbox -->
 
                     <div class="col-12 col-lg-6 d-none" id="signInBox">
@@ -131,6 +130,13 @@ include "connection.php";
                             <div class="col-12">
                                 <p class="title02">Sign In</p>
                             </div>
+
+                            <div class="col-12 d-none" id="msgdiv2">
+                                <div class="alert alert-danger" role="alert" id="msg2">
+
+                                </div>
+                            </div>
+
 
                             <div class="col-12">
                                 <label class="form-label">Email</label>
