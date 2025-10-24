@@ -5207,9 +5207,12 @@
           data[config](this);
         }
       });
-    }
+    }  
 
   }
+
+
+
   /**
    * Data API implementation
    */

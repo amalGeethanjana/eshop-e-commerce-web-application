@@ -1,7 +1,5 @@
 <?php
 
-
-
 include "connection.php";
 
 $fname  = $_POST["f"];
@@ -39,6 +37,7 @@ if (empty($fname)) {
     echo ("Please Select Gender");
 } else {
 
+
     $rs = Database::search("SELECT * FROM `user` WHERE `email` = '".$email."' OR `mobile` = '".$mobile."'");
     $n = $rs->num_rows;
 
@@ -56,8 +55,6 @@ if (empty($fname)) {
         echo ("success");
 
 }
-
-
 }
 
 

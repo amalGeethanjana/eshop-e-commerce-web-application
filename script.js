@@ -45,17 +45,18 @@ function signup(){
 function signin(){
    var email = document.getElementById("email2");
    var password = document.getElementById("password2");
-
+   var rememberme = document.getElementById("rememberme")
    var f = new FormData;
    f.append("e",email.value);
    f.append("p",password.value);
+   f.append("r",rememberme.checked);
 
   var request =  new XMLHttpRequest();
 
   request.onreadystatechange = function () {
    if (request.status == 200 && request.readyState == 4) {
       var response = request.responseText;
-      alert(response);
+
       if (response == "success") {
             document.getElementById("msg2").innerHTML = "Login Successfull";
             document.getElementById("msg2").className = "alert alert-success";
